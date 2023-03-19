@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGreen"
+    tools:context=".UserSignIn">
+
+    <!--  Page: Sign In  -->
+    <!--  Logo  -->
+    <ImageView
+        android:id="@+id/signInIV"
+        android:layout_width="215dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="205dp"
+        android:layout_marginEnd="89dp"
+        android:background="@color/lightGreen"
+        app:layout_constraintBottom_toTopOf="@+id/signInTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_dark" />
+
+    <!--  Page Name: Sign In  -->
+    <TextView
+        android:id="@+id/signInTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="151dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="152dp"
+        android:layout_marginBottom="6dp"
+        android:letterSpacing="0.4"
+        android:text="Sign In"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textColor="@color/darkGreen"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/inputEmailAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signInIV"/>
+
+    <!--  Input Field: Email  -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputEmailAdd"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="96dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="47dp"
+        android:hint="Email"
+        app:counterEnabled="true"
+        app:counterMaxLength="50"
+        app:endIconMode="clear_text"
+        app:helperText="Required"
+        app:helperTextTextColor="#FF0000"
+        app:layout_constraintBottom_toTopOf="@+id/inputPass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signInTV"
+        app:placeholderTextColor="@color/darkGreen"
+        app:startIconDrawable="@drawable/icon_email_dark">
+
+        <!-- Email Input - char limit: 50 -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputEmail"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:maxLength="50"
+            android:textColor="@color/darkGreen" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--  Button: Sign In  -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputPass"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="300dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginEnd="47dp"
+        android:hint="Password"
+        app:counterEnabled="true"
+        app:counterMaxLength="12"
+        app:endIconMode="password_toggle"
+        app:helperText="Required"
+        app:helperTextTextColor="#FF0000"
+        app:layout_constraintBottom_toTopOf="@+id/SignInBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputEmailAdd"
+        app:placeholderTextColor="@color/darkGreen"
+        app:startIconDrawable="@drawable/icon_pass_dark">
+
+        <!-- Password Input - char limit: 12 -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputPassword"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:maxLength="12"
+            android:textColor="@color/darkGreen" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- TextView: Don't have an account?  -->
+    <Button
+        android:id="@+id/SignInBtn"
+        android:layout_width="300dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginBottom="4dp"
+        android:text="Sign In"
+        app:layout_constraintBottom_toTopOf="@+id/redirectSignUpBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputPass" />
+
+    <!--  Button: Sign Up  -->
+
+    <TextView
+        android:id="@+id/noAccBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="136dp"
+        android:text="Don't have an account?"
+        android:textColor="@color/darkGreen"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/redirectSignUpBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SignInBtn" />
+
+    <Button
+        android:id="@+id/redirectSignUpBtn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="-4dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="156dp"
+        android:backgroundTint="@color/lightGreen"
+        android:text="Sign Up"
+        android:textAllCaps="false"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/noAccBtn"
+        app:layout_constraintTop_toBottomOf="@+id/SignInBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
