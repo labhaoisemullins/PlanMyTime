@@ -1,14 +1,14 @@
 <resources>
     <string name="app_name">Plan My Time</string>
 
-<!--  Main page of app  -->
+    <!--  Main page of app  -->
     <string-array name="main">
         <item> My Timetable </item>
         <item> My Projects </item>
         <item> UL Campus Guide </item>
     </string-array>
 
-<!--  Array: Days of the week  -->
+    <!--  Array: Days of the week  -->
     <string-array name="Week">
         <item> Monday </item>
         <item> Tuesday </item>
@@ -19,7 +19,7 @@
         <item> Sunday </item>
     </string-array>
 
-<!-- Array: List of all slot types   -->
+    <!-- Array: List of all slot types   -->
     <string-array name="slots_array">
         <item> Lecture </item>
         <item> Laboratory </item>
