@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LandingPage"
+    android:background="@color/lightGreen">
+
+    <!--  Page: Landing Page  -->
+    <!--  Logo  -->
+    <ImageView
+        android:id="@+id/signInIV"
+        android:layout_width="215dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="204dp"
+        android:layout_marginEnd="89dp"
+        android:background="@color/lightGreen"
+        app:layout_constraintBottom_toTopOf="@+id/signIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_dark" />
+
+    <!--  Button: Sign In  -->
+    <Button
+        android:id="@+id/signIn"
+        android:layout_width="160dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="126dp"
+        android:layout_marginBottom="3dp"
+        android:text="Sign In"
+        app:layout_constraintBottom_toTopOf="@+id/signUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signInIV" />
+
+    <!--  Button: Sign Up  -->
+    <Button
+        android:id="@+id/signUp"
+        android:layout_width="160dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="126dp"
+        android:layout_marginBottom="321dp"
+        android:text="Sign Up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signIn" />
+</androidx.constraintlayout.widget.ConstraintLayout>
