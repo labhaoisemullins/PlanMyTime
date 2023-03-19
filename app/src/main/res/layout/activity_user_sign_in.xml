@@ -75,7 +75,7 @@
             android:textColor="@color/darkGreen" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!--  Button: Sign In  -->
+    <!--  Input Field: Password  -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/inputPass"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -105,7 +105,7 @@
             android:textColor="@color/darkGreen" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- TextView: Don't have an account?  -->
+    <!--  Button: Sign In  -->
     <Button
         android:id="@+id/SignInBtn"
         android:layout_width="300dp"
@@ -119,8 +119,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputPass" />
 
-    <!--  Button: Sign Up  -->
-
+    <!-- TextView: Don't have an account?  -->
     <TextView
         android:id="@+id/noAccBtn"
         android:layout_width="wrap_content"
@@ -136,6 +135,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SignInBtn" />
 
+    <!--  Button: Sign Up  -->
     <Button
         android:id="@+id/redirectSignUpBtn"
         style="?android:attr/borderlessButtonStyle"
@@ -152,5 +152,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/noAccBtn"
         app:layout_constraintTop_toBottomOf="@+id/SignInBtn" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

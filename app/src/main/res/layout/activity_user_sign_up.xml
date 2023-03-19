@@ -9,8 +9,6 @@
 
     <!--  Page: Sign Up  -->
     <!--  Logo  -->
-
-    <!--  Page Name: Sign Up  -->
     <ImageView
         android:id="@+id/signUpIV"
         android:layout_width="215dp"
@@ -28,7 +26,7 @@
         app:layout_constraintVertical_bias="0.671"
         app:srcCompat="@drawable/icon_dark" />
 
-    <!--  Title: Sign Up  -->
+    <!--  Page Name: Sign Up  -->
     <TextView
         android:id="@+id/signUpTV"
         android:layout_width="wrap_content"
