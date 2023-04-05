@@ -36,7 +36,7 @@ public class UserSignIn extends AppCompatActivity {
         });
     }
     public void openHomepage(){
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, HomePage.class);
         startActivity(intent);
     }
 
