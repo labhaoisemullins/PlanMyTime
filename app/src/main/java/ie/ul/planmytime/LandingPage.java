@@ -1,11 +1,11 @@
 package ie.ul.planmytime;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class LandingPage extends AppCompatActivity {
     private Button signIn;
@@ -44,3 +44,5 @@ public class LandingPage extends AppCompatActivity {
         startActivity(intent);
     }
 }
+
+
