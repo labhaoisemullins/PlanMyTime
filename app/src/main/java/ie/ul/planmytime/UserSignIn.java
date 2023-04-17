@@ -1,11 +1,11 @@
 package ie.ul.planmytime;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class UserSignIn extends AppCompatActivity {
 
@@ -36,12 +36,12 @@ public class UserSignIn extends AppCompatActivity {
         });
     }
     public void openHomepage(){
-        Intent intent = new Intent(this, HomePage.class);
+        Intent intent = new Intent(UserSignIn.this, Homepage.class);
         startActivity(intent);
     }
 
     public void openSignUpPage(){
-        Intent intent = new Intent(this, UserSignUp.class);
+        Intent intent = new Intent(UserSignIn.this, UserSignUp.class);
         startActivity(intent);
     }
 }
