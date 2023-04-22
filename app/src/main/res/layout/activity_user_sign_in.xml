@@ -113,6 +113,7 @@
         android:layout_marginStart="46dp"
         android:layout_marginEnd="47dp"
         android:layout_marginBottom="4dp"
+        android:onClick="OnClick"
         android:text="Sign In"
         app:layout_constraintBottom_toTopOf="@+id/redirectSignUpBtn"
         app:layout_constraintEnd_toEndOf="parent"
@@ -152,4 +153,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/noAccBtn"
         app:layout_constraintTop_toBottomOf="@+id/SignInBtn" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

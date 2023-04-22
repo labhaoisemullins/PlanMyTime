@@ -7,7 +7,13 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class LandingPage extends AppCompatActivity {
+
+    FirebaseAuth mAuth;
+    FirebaseUser currentUser ;
     private Button signIn;
     private Button signUp;
 
@@ -15,6 +21,9 @@ public class LandingPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_landing_page);
+
+//        mAuth = FirebaseAuth.getInstance();
+//        currentUser = mAuth.getCurrentUser();
 
         //  On Click - Sign In Page
         signIn = (Button) findViewById(R.id.signIn);

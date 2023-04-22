@@ -9,14 +9,20 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import androidx.appcompat.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Homepage extends AppCompatActivity {
 
+    FirebaseAuth mAuth;
+
     private Toolbar toolbar;
     private ListView listView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +45,7 @@ public class Homepage extends AppCompatActivity {
         getSupportActionBar().setTitle("PlanMyTime");
     } */
 
-    private void setupListView(){
+    private void setupListView() {
         String[] title = getResources().getStringArray(R.array.Main);
         String[] description = getResources().getStringArray(R.array.Description);
 
@@ -93,20 +99,35 @@ public class Homepage extends AppCompatActivity {
 
             title = (TextView) convertView.findViewById(R.id.tvMain);
             description = (TextView) convertView.findViewById(R.id.tvDescription);
-            imageView = (ImageView)convertView.findViewById(R.id.ivMain);
+            imageView = (ImageView) convertView.findViewById(R.id.ivMain);
 
             title.setText(titleArray[position]);
             description.setText(descriptionArray[position]);
 
-            if(titleArray[position].equalsIgnoreCase("Timetable")) {
+            if (titleArray[position].equalsIgnoreCase("Timetable")) {
                 imageView.setImageResource(R.drawable.icons_timetable);
-            } else if (titleArray[position].equalsIgnoreCase("My Projects")){
+            } else if (titleArray[position].equalsIgnoreCase("My Projects")) {
                 imageView.setImageResource(R.drawable.icons_projects);
             } else if (titleArray[position].equalsIgnoreCase("UL Campus Guide")) {
                 imageView.setImageResource(R.drawable.icons_map);
             }
 
             return convertView;
+        }
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            String name = user.getDisplayName();
+            String email = user.getEmail();
+
+            boolean emailVerified = user.isEmailVerified();
+
+            String uid = user.getUid();
         }
     }
 }
