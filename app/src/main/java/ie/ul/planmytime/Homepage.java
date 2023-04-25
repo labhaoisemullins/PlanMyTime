@@ -1,10 +1,12 @@
 package ie.ul.planmytime;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -52,6 +54,31 @@ public class Homepage extends AppCompatActivity {
         SimpleAdapter simpleAdapter = new SimpleAdapter(this, title, description);
         listView.setAdapter(simpleAdapter);
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                switch(position){
+                    case 0: {
+                        Intent intent = new Intent(Homepage.this, WeekActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+                    case 1: {
+                        Intent intent = new Intent(Homepage.this, WeekActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+                    case 2: {
+                        Intent intent = new Intent(Homepage.this, MapsActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+                    case 3: {
+                        break;
+                    }
+                }
+            }
+        });
 
     }
 
