@@ -18,6 +18,8 @@ import androidx.appcompat.widget.Toolbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import ie.ul.planmytime.R;
+
 public class Homepage extends AppCompatActivity {
 
     FirebaseAuth mAuth;
@@ -38,36 +40,38 @@ public class Homepage extends AppCompatActivity {
 
 
     private void setupUIViews() {
-        toolbar = (Toolbar) findViewById(R.id.ToolbarMain);
-        listView = (ListView) findViewById(R.id.lvMain);
+        toolbar = (Toolbar) findViewById(R.id.MainToolbar);
+        listView = (ListView) findViewById(R.id.MainLV);
     }
 
    /*  private void initToolbar() {
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("PlanMyTime");
+        getSupportActionBar().setTitle("Plan My Time");
     } */
 
     private void setupListView() {
         String[] title = getResources().getStringArray(R.array.Main);
-        String[] description = getResources().getStringArray(R.array.Description);
 
-        SimpleAdapter simpleAdapter = new SimpleAdapter(this, title, description);
+        SimpleAdapter simpleAdapter = new SimpleAdapter(this, title);
         listView.setAdapter(simpleAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch(position){
+                switch (position) {
+                    // My Timetable
                     case 0: {
                         Intent intent = new Intent(Homepage.this, WeekActivity.class);
                         startActivity(intent);
                         break;
                     }
+                    // My Projects
                     case 1: {
-                        Intent intent = new Intent(Homepage.this, WeekActivity.class);
+                        Intent intent = new Intent(Homepage.this, ProjectDetail.class);
                         startActivity(intent);
                         break;
                     }
+                    // UL Campus Guide
                     case 2: {
                         Intent intent = new Intent(Homepage.this, MapsActivity.class);
                         startActivity(intent);
@@ -79,42 +83,34 @@ public class Homepage extends AppCompatActivity {
                 }
             }
         });
-
     }
 
     public class SimpleAdapter extends BaseAdapter {
-
+        // define all variables
         private Context mContext;
         private LayoutInflater layoutInflater;
-        private TextView title, description;
+        private TextView title;
         private String[] titleArray;
-        private String[] descriptionArray;
         private ImageView imageView;
 
-        public SimpleAdapter(Context context, String[] title, String[] description) {
-
+        public SimpleAdapter(Context context, String[] title) {
             mContext = context;
             titleArray = title;
-            descriptionArray = description;
-            layoutInflater = LayoutInflater.from(context);
-
+            layoutInflater = LayoutInflater.from(context); // allows us to put diff. layouts into a view
         }
 
         @Override
         public int getCount() {
-
             return titleArray.length;
         }
 
         @Override
         public Object getItem(int position) {
-
             return titleArray[position];
         }
 
         @Override
         public long getItemId(int position) {
-
             return position;
         }
 
@@ -124,24 +120,21 @@ public class Homepage extends AppCompatActivity {
                 convertView = layoutInflater.inflate(R.layout.home_page_single_item, null);
             }
 
-            title = (TextView) convertView.findViewById(R.id.tvMain);
-            description = (TextView) convertView.findViewById(R.id.tvDescription);
-            imageView = (ImageView) convertView.findViewById(R.id.ivMain);
+            title = (TextView) convertView.findViewById(R.id.MainTV);
+            imageView = (ImageView) convertView.findViewById(R.id.MainIV);
 
             title.setText(titleArray[position]);
-            description.setText(descriptionArray[position]);
 
-            if (titleArray[position].equalsIgnoreCase("Timetable")) {
+            // set up drawable images
+            if (titleArray[position].equalsIgnoreCase("My Timetable")) {
                 imageView.setImageResource(R.drawable.icons_timetable);
             } else if (titleArray[position].equalsIgnoreCase("My Projects")) {
                 imageView.setImageResource(R.drawable.icons_projects);
             } else if (titleArray[position].equalsIgnoreCase("UL Campus Guide")) {
                 imageView.setImageResource(R.drawable.icons_map);
             }
-
             return convertView;
         }
-
     }
 
     @Override
