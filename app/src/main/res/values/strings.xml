@@ -8,13 +8,6 @@
         <item> UL Campus Guide </item>
     </string-array>
 
-    <string-array name="Description">
-        <item> Description 1 </item>
-        <item> Description 2 </item>
-        <item> Description 3 </item>
-    </string-array>
-
-
     <!--  Array: Days of the week  -->
     <string-array name="Week">
         <item> Monday </item>
@@ -34,5 +27,6 @@
         <item> Study </item>
         <item> Break </item>
     </string-array>
+
     <string name="title_activity_maps">MapsActivity</string>
 </resources>
