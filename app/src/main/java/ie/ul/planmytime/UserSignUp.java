@@ -80,7 +80,6 @@ public class UserSignUp extends AppCompatActivity {
     }
 }
 
-
         //  On Click - open main page of app
 //        SignUpBtn = (Button) findViewById(R.id.SignInBtn);
 //        SignUpBtn.setOnClickListener(new View.OnClickListener(){
