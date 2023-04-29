@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<!--  Primary colors  -->
+<!--  Set the primary colors  -->
     <color name="lightGreen">#4CA55A</color>
     <color name="darkGreen">#153627</color>
     <color name="black">#FF000000</color>
