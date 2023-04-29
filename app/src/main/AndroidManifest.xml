@@ -27,9 +27,11 @@
             android:label="@string/title_activity_maps" />
         <activity
             android:name=".WeekActivity"
+            android:label="WeekActivity"
             android:exported="false" />
         <activity
             android:name=".Homepage"
+            android:label="Homepage"
             android:exported="false" />
         <activity
             android:name=".LandingPage"
