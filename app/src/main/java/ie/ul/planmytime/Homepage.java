@@ -15,13 +15,16 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 //import androidx.appcompat.widget.Toolbar;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
 
 public class Homepage extends AppCompatActivity {
 
     FirebaseAuth mAuth;
     private ListView listView;
+    private FloatingActionButton share;
 
 
     @Override
@@ -31,6 +34,21 @@ public class Homepage extends AppCompatActivity {
 
         setupUIViews();
         setupListView();
+
+        share = (FloatingActionButton) findViewById(R.id.share);
+
+        // Share with friends
+        share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.setType("text/plain");
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "Download the Plan My Time app today and stay up-to-date with your college timetable and projects.\n\nhttps://play.google.com/store/apps/details?id=" + getPackageName());
+                startActivity(Intent.createChooser(sendIntent, "Choose one"));
+
+            }
+        });
     }
 
 
