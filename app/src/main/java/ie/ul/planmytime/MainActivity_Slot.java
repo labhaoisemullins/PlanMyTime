@@ -45,7 +45,7 @@ public class MainActivity_Slot extends AppCompatActivity {
     private void setRecyclerViewData() {
         slotArrayList.add(new Slot("CS4084", "CS1044", "Lecture", "11 - 12"));
         slotArrayList.add(new Slot("CS4106", "SG15", "Laboratory", "12 - 2"));
-        slotArrayList.add(new Slot("CS4116", "SG15", "Laboratory", "12 - 2"));
+        slotArrayList.add(new Slot("CS4116", "SG15", "Tutorial", "12 - 2"));
     }
 
     private View.OnClickListener onAddingListener() {
