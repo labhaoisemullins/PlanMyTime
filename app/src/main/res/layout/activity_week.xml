@@ -3,32 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/lightGreen"
     tools:context=".Homepage">
-
-    <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="?android:attr/actionBarSize"
-        android:background="@color/darkGreen"
-        app:titleTextColor="@color/lightGreen"
-        android:id="@+id/WeekToolbar">
-    </androidx.appcompat.widget.Toolbar>
 
     <ListView
         android:id="@+id/WeekLV"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/WeekToolbar"
         android:layout_margin="0dp"
-        android:dividerHeight="1dp"
+        android:dividerHeight="2dp"
         android:background="@color/lightGreen"
-        android:divider="@color/lightGreen">
-
-        <!-- android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp" -->
-
-
+        android:divider="@color/lightGreen"> <!-- cannot see divider lines -->
     </ListView>
 </RelativeLayout>
