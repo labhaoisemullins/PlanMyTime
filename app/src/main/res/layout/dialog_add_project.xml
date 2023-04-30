@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/lightGreen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="Module"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+
+        <EditText
+            android:id="@+id/module"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textColor="@color/darkGreen"
+            android:inputType="textCapSentences"
+            android:backgroundTint="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="Due Date" />
+
+        <EditText
+            android:id="@+id/dueDate"
+            android:textColor="@color/darkGreen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:inputType="text"
+            android:backgroundTint="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="Percentage" />
+
+        <EditText
+            android:id="@+id/percentage"
+            android:textColor="@color/darkGreen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:inputType="text"
+            android:backgroundTint="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--  Add slot button  -->
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_gravity="right"
+            android:layout_marginRight="30dp"
+            android:layout_width="145dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.5"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/darkGreen"
+            android:gravity="center"
+            android:text="add" />
+
+        <!--  Cancel slot button  -->
+        <Button
+            android:id="@+id/btn_cancel"
+            android:gravity="center"
+            android:layout_marginTop="-9dp"
+            android:layout_width="145dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.5"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/darkGreen"
+            android:textColor="@color/white"
+            android:text="cancel" />
+    </LinearLayout>
+</LinearLayout>
