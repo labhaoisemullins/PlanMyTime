@@ -18,8 +18,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import ie.ul.planmytime.R;
-
 public class Homepage extends AppCompatActivity {
 
     FirebaseAuth mAuth;
@@ -52,13 +50,13 @@ public class Homepage extends AppCompatActivity {
                 switch (position) {
                     // My Timetable
                     case 0: {
-                        Intent intent = new Intent(Homepage.this, Homepage.class);
+                        Intent intent = new Intent(Homepage.this, WeekActivity_Slot.class);
                         startActivity(intent);
                         break;
                     }
                     // My Projects
                     case 1: {
-                        Intent intent = new Intent(Homepage.this, Homepage.class);
+                        Intent intent = new Intent(Homepage.this, WeekActivity_Project.class);
                         startActivity(intent);
                         break;
                     }
