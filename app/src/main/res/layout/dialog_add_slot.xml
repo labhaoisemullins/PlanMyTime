@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/lightGreen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="Module"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            />
+
+        <EditText
+            android:id="@+id/module"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:inputType="textCapSentences"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/darkGreen" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="Location" />
+
+        <EditText
+            android:id="@+id/location"
+            android:textColor="@color/darkGreen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:backgroundTint="@color/white"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="Slot Type" />
+
+        <EditText
+            android:id="@+id/slotType"
+            android:textColor="@color/darkGreen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:backgroundTint="@color/white"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="Slot Time" />
+
+        <EditText
+            android:id="@+id/slotTime"
+            android:textColor="@color/darkGreen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:backgroundTint="@color/white"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--  Add slot button  -->
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_gravity="right"
+            android:layout_marginRight="30dp"
+            android:layout_width="145dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.5"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/darkGreen"
+            android:gravity="center"
+            android:text="add" />
+
+        <!--  Cancel slot button  -->
+        <Button
+            android:id="@+id/btn_cancel"
+            android:gravity="center"
+            android:layout_marginTop="-9dp"
+            android:layout_width="145dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.5"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/darkGreen"
+            android:textColor="@color/white"
+            android:text="cancel" />
+    </LinearLayout>
+</LinearLayout>

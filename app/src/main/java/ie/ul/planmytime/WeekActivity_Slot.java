@@ -13,7 +13,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 //import android.support.LayoutRes;
-import androidx.recyclerview.widget.RecyclerView;
 
 
 import androidx.annotation.NonNull;
@@ -22,7 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import ie.ul.planmytime.Utils.LetterImageView;
 
-public class WeekActivity extends AppCompatActivity {
+public class WeekActivity_Slot extends AppCompatActivity {
 
     private ListView listView;
     public static SharedPreferences sharedPreferences;  // to be accessed across all activities
@@ -31,7 +30,7 @@ public class WeekActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_week);
+        setContentView(R.layout.activity_week_slot);
 
         setupUIViews();
         setupListView();
@@ -46,7 +45,7 @@ public class WeekActivity extends AppCompatActivity {
     private void setupListView(){
         String[] week = getResources().getStringArray(R.array.Week);
 
-        WeekAdapter adapter = new WeekAdapter(this, R.layout.activity_week_single_item, week);
+        WeekAdapter adapter = new WeekAdapter(this, R.layout.activity_week_single_item_slot, week);
 
         listView.setAdapter(adapter);
 
@@ -55,37 +54,37 @@ public class WeekActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch(position){
                     case 0: {
-                        startActivity(new Intent(WeekActivity.this, Homepage.class));
+                        startActivity(new Intent(WeekActivity_Slot.this, MainActivity_Slot.class));
                         sharedPreferences.edit().putString(SEL_DAY, "Monday").apply();
                         break;
                     }
                     case 1: {
-                        startActivity(new Intent(WeekActivity.this, MapsActivity.class));
+                        startActivity(new Intent(WeekActivity_Slot.this, MainActivity_Slot.class));
                         sharedPreferences.edit().putString(SEL_DAY, "Tuesday").apply();
                         break;
                     }
                     case 2: {
-                        startActivity(new Intent(WeekActivity.this, Homepage.class));
+                        startActivity(new Intent(WeekActivity_Slot.this, MainActivity_Slot.class));
                         sharedPreferences.edit().putString(SEL_DAY, "Wednesday").apply();
                         break;
                     }
                     case 3: {
-                        startActivity(new Intent(WeekActivity.this, Homepage.class));
+                        startActivity(new Intent(WeekActivity_Slot.this, MainActivity_Slot.class));
                         sharedPreferences.edit().putString(SEL_DAY, "Thursday").apply();
                         break;
                     }
                     case 4: {
-                        startActivity(new Intent(WeekActivity.this, Homepage.class));
+                        startActivity(new Intent(WeekActivity_Slot.this, MainActivity_Slot.class));
                         sharedPreferences.edit().putString(SEL_DAY, "Friday").apply();
                         break;
                     }
                     case 5: {
-                        startActivity(new Intent(WeekActivity.this, Homepage.class));
+                        startActivity(new Intent(WeekActivity_Slot.this, MainActivity_Slot.class));
                         sharedPreferences.edit().putString(SEL_DAY, "Saturday").apply();
                         break;
                     }
                     case 6: {
-                        startActivity(new Intent(WeekActivity.this, Homepage.class));
+                        startActivity(new Intent(WeekActivity_Slot.this, MainActivity_Slot.class));
                         sharedPreferences.edit().putString(SEL_DAY, "Sunday").apply();
                         break;
                     }
