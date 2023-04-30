@@ -13,7 +13,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
+//import androidx.appcompat.widget.Toolbar;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -23,8 +23,6 @@ import ie.ul.planmytime.R;
 public class Homepage extends AppCompatActivity {
 
     FirebaseAuth mAuth;
-
-    private Toolbar toolbar;
     private ListView listView;
 
 
@@ -34,20 +32,13 @@ public class Homepage extends AppCompatActivity {
         setContentView(R.layout.activity_home_page);
 
         setupUIViews();
-        //initToolbar();
         setupListView();
     }
 
 
     private void setupUIViews() {
-        toolbar = (Toolbar) findViewById(R.id.MainToolbar);
         listView = (ListView) findViewById(R.id.MainLV);
     }
-
-   /*  private void initToolbar() {
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Plan My Time");
-    } */
 
     private void setupListView() {
         String[] title = getResources().getStringArray(R.array.Main);
@@ -61,13 +52,13 @@ public class Homepage extends AppCompatActivity {
                 switch (position) {
                     // My Timetable
                     case 0: {
-                        Intent intent = new Intent(Homepage.this, WeekActivity.class);
+                        Intent intent = new Intent(Homepage.this, Homepage.class);
                         startActivity(intent);
                         break;
                     }
                     // My Projects
                     case 1: {
-                        Intent intent = new Intent(Homepage.this, ProjectDetail.class);
+                        Intent intent = new Intent(Homepage.this, Homepage.class);
                         startActivity(intent);
                         break;
                     }

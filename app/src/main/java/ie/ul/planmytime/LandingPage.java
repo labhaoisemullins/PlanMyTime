@@ -20,6 +20,7 @@ public class LandingPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();  // hide the toolbar
         setContentView(R.layout.activity_landing_page);
 
 //        mAuth = FirebaseAuth.getInstance();
