@@ -50,7 +50,7 @@
 <!--   Timetable (slot) activities   -->
         <activity
             android:name=".MainActivity_Slot"
-            android:label="Today's Timetable"
+            android:label="Timetable"
             android:exported="false" />
         <activity
             android:name=".WeekActivity_Slot"
