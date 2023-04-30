@@ -21,18 +21,6 @@
             android:value=" AIzaSyBK8xpNaCh54RnJoC3_Tr7Rm3LQJFLnHKY" />
 
         <activity
-            android:name=".Maps Activity"
-            android:exported="false"
-            android:label="@string/title_activity_maps" />
-        <activity
-            android:name=".WeekActivity"
-            android:label="Week Activity"
-            android:exported="false" />
-        <activity
-            android:name=".Homepage"
-            android:label="Homepage"
-            android:exported="false" />
-        <activity
             android:name=".LandingPage"
             android:exported="true" >
             <intent-filter>
@@ -42,10 +30,53 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".UserSignUp"
+            android:name=".Homepage"
+            android:label="Homepage"
             android:exported="false" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_maps" />
+
+        <activity
+            android:name=".UserSignUp"
+            android:exported="false"
+            />
         <activity
             android:name=".UserSignIn"
+            android:exported="false" />
+
+<!--   Timetable (slot) activities   -->
+        <activity
+            android:name=".MainActivity_Slot"
+            android:label="Today's Timetable"
+            android:exported="false" />
+        <activity
+            android:name=".WeekActivity_Slot"
+            android:label="Week Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Slot"
+            android:exported="false" />
+        <activity
+            android:name=".RecyclerAdapter_Slot"
+            android:exported="false" />
+
+<!--   Project (slot) activities   -->
+        <activity
+            android:name=".MainActivity_Project"
+            android:label="My Projects"
+            android:exported="false" />
+        <activity
+            android:name=".WeekActivity_Project"
+            android:label="Week Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Project"
+            android:exported="false" />
+        <activity
+            android:name=".RecyclerAdapter_Project"
             android:exported="false" />
     </application>
 
