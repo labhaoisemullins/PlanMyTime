@@ -16,18 +16,17 @@
         android:theme="@style/Theme.PlanMyTime"
         tools:targetApi="31" >
 
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value=" AIzaSyBK8xpNaCh54RnJoC3_Tr7Rm3LQJFLnHKY" />
 
         <activity
-            android:name=".MapsActivity"
+            android:name=".Maps Activity"
             android:exported="false"
             android:label="@string/title_activity_maps" />
         <activity
             android:name=".WeekActivity"
-            android:label="WeekActivity"
+            android:label="Week Activity"
             android:exported="false" />
         <activity
             android:name=".Homepage"
