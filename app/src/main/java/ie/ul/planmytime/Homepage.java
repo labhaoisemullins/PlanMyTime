@@ -74,7 +74,7 @@ public class Homepage extends AppCompatActivity {
                     }
                     // My Projects
                     case 1: {
-                        Intent intent = new Intent(Homepage.this, WeekActivity_Project.class);
+                        Intent intent = new Intent(Homepage.this, MainActivity_Project.class);
                         startActivity(intent);
                         break;
                     }

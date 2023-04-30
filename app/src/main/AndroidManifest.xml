@@ -69,10 +69,6 @@
             android:label="My Projects"
             android:exported="false" />
         <activity
-            android:name=".WeekActivity_Project"
-            android:label="Plan My Time"
-            android:exported="false" />
-        <activity
             android:name=".Project"
             android:exported="false" />
         <activity
