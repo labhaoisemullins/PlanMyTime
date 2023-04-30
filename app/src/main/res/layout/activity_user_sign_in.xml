@@ -72,7 +72,8 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:maxLength="50"
-            android:textColor="@color/darkGreen" />
+            android:textColor="@color/darkGreen"
+            android:inputType="text"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <!--  Input Field: Password  -->
@@ -102,7 +103,8 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:maxLength="12"
-            android:textColor="@color/darkGreen" />
+            android:textColor="@color/darkGreen"
+            android:inputType="text"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <!--  Button: Sign In  -->
