@@ -31,7 +31,7 @@
         </activity>
         <activity
             android:name=".Homepage"
-            android:label="Homepage"
+            android:label="Plan My Time"
             android:exported="false" />
 
         <activity
@@ -54,7 +54,7 @@
             android:exported="false" />
         <activity
             android:name=".WeekActivity_Slot"
-            android:label="Week Activity"
+            android:label="Plan My Time"
             android:exported="false" />
         <activity
             android:name=".Slot"
@@ -70,7 +70,7 @@
             android:exported="false" />
         <activity
             android:name=".WeekActivity_Project"
-            android:label="Week Activity"
+            android:label="Plan My Time"
             android:exported="false" />
         <activity
             android:name=".Project"
