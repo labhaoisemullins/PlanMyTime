@@ -19,13 +19,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-//import androidx.appcompat.widget.Toolbar;
 
 import ie.ul.planmytime.Utils.LetterImageView;
 
 public class WeekActivity extends AppCompatActivity {
 
-//    private Toolbar toolbar;
     private ListView listView;
     public static SharedPreferences sharedPreferences;  // to be accessed across all activities
     public static String SEL_DAY;
@@ -36,21 +34,13 @@ public class WeekActivity extends AppCompatActivity {
         setContentView(R.layout.activity_week);
 
         setupUIViews();
-//        initToolbar();
-
         setupListView();
     }
 
     private void setupUIViews(){
-//        toolbar = (Toolbar)findViewById(R.id.WeekToolbar);
         listView = (ListView)findViewById(R.id.WeekLV);
         sharedPreferences = getSharedPreferences("DAY", MODE_PRIVATE);
     }
-//    private void initToolbar(){
-//        setSupportActionBar(toolbar);
-//        getSupportActionBar().setTitle("Week Timetable");
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);  // brings you to the previous activity
-//    }
 
     // OnItemClickListener - used so that each click is unique to activity (ex. Click Monday, opens Mondays' timetable not all days)
     private void setupListView(){
