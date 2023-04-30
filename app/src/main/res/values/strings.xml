@@ -19,14 +19,8 @@
         <item> Sunday </item>
     </string-array>
 
-    <!-- Array: List of all slot types   -->
-    <string-array name="slots_array">
-        <item> Lecture </item>
-        <item> Laboratory </item>
-        <item> Tutorial </item>
-        <item> Study </item>
-        <item> Break </item>
-    </string-array>
-
+    <string name="title_activity_main">Homepage</string>
+    <string name="title_activity_week">WeekActivity</string>
     <string name="title_activity_maps">MapsActivity</string>
+
 </resources>
