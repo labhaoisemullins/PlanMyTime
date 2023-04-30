@@ -7,22 +7,12 @@
     tools:context=".Homepage"
     android:background="@color/lightGreen">
 
-    <!--    Main Toolbar of App -->
-    <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="?android:attr/actionBarSize"
-        android:background="@color/darkGreen"
-        app:titleTextColor="@color/lightGreen"
-        android:id="@+id/MainToolbar">
-    </androidx.appcompat.widget.Toolbar>
-
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/MainLV"
         android:layout_margin="0dp"
         android:dividerHeight="1dp"
-        android:layout_below="@+id/MainToolbar"
         android:background="@color/lightGreen"
         android:divider="@color/lightGreen">  <!-- cannot see divider lines -->
     </ListView>
