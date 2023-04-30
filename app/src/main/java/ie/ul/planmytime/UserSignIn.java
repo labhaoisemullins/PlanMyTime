@@ -27,6 +27,7 @@ public class UserSignIn extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();  // hide the toolbar
         setContentView(R.layout.activity_user_sign_in);
 
         inputEmail = findViewById(R.id.inputEmail);
